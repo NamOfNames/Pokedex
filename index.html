@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokedex</title>
+    <link rel="shortcut icon" href="./img/icon.webp" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <div id="root">
+      <div class="container">
+        <div class="main-section">
+          <div class="search-bar">
+            <i class="fas fa-search search-icon"></i>
+            <input
+              type="text"
+              name="search-pokemon"
+              id="search-input"
+              placeholder="Enter a name or number or..."
+            />
+          </div>
+            <select name="Select" id="pokemon-list">
+            </select>
+          <div class="info-wrapper">
+            <img
+              src="./img/Pokedex_tool_icon-icons.com_67529.png"
+              alt="pokemon icon"
+              class="pokemon-icon"
+            />
+          </div>
+        </div>
+        <div class="additional-section">
+          <div class="row">
+            <div class="item">
+              <div class="label">Name</div>
+              <div class="value pokemon-name">__</div>
+            </div>
+            <div class="item">
+              <div class="label">Type</div>
+              <div class="value pokemon-type">__</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="item">
+              <div class="label">Height</div>
+              <div class="value"><span class="pokemon-height">__</span> cm</div>
+            </div>
+            <div class="item">
+              <div class="label">Weight</div>
+              <div class="value"><span class="pokemon-weight">__</span> kg</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="item">
+              <div class="label">Bio</div>
+              <div class="value pokemon-bio">__</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./main.js"></script>
+</html>
