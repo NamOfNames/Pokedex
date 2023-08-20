@@ -8,27 +8,6 @@ const pokemonHeight = document.querySelector(".pokemon-height");
 const pokemonWeight = document.querySelector(".pokemon-weight");
 const pokemonBio = document.querySelector(".pokemon-bio");
 
-var pokedex = {};
-
-window.onload = async function () {
-  for (let i = 1; i <= pokemonCount; i++) {
-    await getPokemon(i);
-    let pokemon = document.createElement("option");
-    pokemon.id = i;
-    pokemon.innerText = i.toString() + ". " + pokedex[i]["name"];
-    // pokemon.classList.add("pokemon-name-2");
-    document.getElementById("pokemon-list").append(pokemon);
-  }
-};
-
-async function getPokemon(num) {
-  let url = "https://pokeapi.co/api/v2/pokemon/" + num.toString();
-  let res = await fetch(url);
-  let pokemon = await res.json();
-  let pokemonName_2 = pokemon["name"];
-  pokedex[num] = { name: pokemonName_2 };
-}
-
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
